@@ -1,0 +1,52 @@
+<div class="container">
+    <div *ngIf="isShowForm" class="container">
+        <input type="text" placeholder="English" [(ngModel)]="newEn">
+        <br>
+        <input type="text" placeholder="Vietnamese" [(ngModel)]="newVn">
+        <button class="btn btn-primary" (click)="addNewWord()">
+            <p class="font-weight-bold">Add New Word</p>
+        </button>
+    </div>
+    <br>
+    <button class="btn btn-primary font-weight-bold" (click)="isShowForm = true" *ngIf="!isShowForm">Add New
+        Word</button>
+    <br><br>
+    <select class="custom-select" [(ngModel)]="filterStatus">
+        <option value="WATCH_ALL">Watch All</option>
+        <option value="REMEMBER_WORD">Remember Word</option>
+        <option value="UNREMEMBER_WORD">Unremember Word</option>
+    </select>
+    <div class="note mt-4">
+        <div class="_1recoment d-flex">
+            <div class="bg bg-success mr-3"></div>
+            <p>: Remember Word</p>
+        </div>
+        <div class="_1recoment d-flex">
+            <div class="bg bg-danger mr-3"></div>
+            <p>: Unremember Word</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div *ngFor="let word of arrWords" class="bg-dark mt-5 text-center">
+        <div *ngIf="getShowStatus(word.memorized)">
+            <h4 class="pt-4 font-weight-bold text-capitalize" [ngStyle]="{ color: word.memorized ? 'green' : 'red'}">
+                {{word.en}}
+            </h4>
+            <p class="text-white">{{word.vn}}</p>
+            <div class="btn-group">
+                <button (click)="removeWord(word.id)" class="btn btn-danger mb-2">Delete</button>
+                <button class="btn btn-success mb-2 ml-3 border" (click)="word.memorized = !word.memorized">
+                    {{word.memorized ? 'Remember' : 'Unremmember'}}
+                    <!--Markup Button (Done Or Ondone)-->
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<ul>
+    <li *ngFor="let subject of arrObject">
+        <p>{{ subject }}</p>
+    </li>
+</ul>
