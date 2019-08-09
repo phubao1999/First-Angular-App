@@ -7,8 +7,8 @@ import { TextInputComponent } from './text-input/text-input.component';
 import { StructComponent } from './struct/struct.component';
 import { PersonComponent } from './person/person.component';
 import { PersonListComponent } from './person-list/person-list.component';
-import { ParentComponent } from './parent.component';
-import { ChildComponent } from './child.component';
+// import { ParentComponent } from './parent.component';
+// import { ChildComponent } from './child.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { ChildComponent } from './child.component';
     StructComponent,
     PersonComponent,
     PersonListComponent,
-    ParentComponent,
-    ChildComponent
+    // ParentComponent,
+    // ChildComponent
   ],
   imports: [
     BrowserModule,
