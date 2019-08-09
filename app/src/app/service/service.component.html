@@ -1,0 +1,31 @@
+<h3>Get Data From Service</h3>
+<table>
+    <thead class="bg-primary text-white">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of results">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.phone }}</td>
+            <td>
+                <p>- Street: {{ user.address.street }}</p>
+                <p>- City:{{ user.address.city }}</p>
+                <p>- ZipCode: {{ user.address.zipcode }}</p>
+            </td>
+            <td>
+                <p>- Name: {{user.company.name}}</p>
+                <p>- bs: {{user.company.bs}}</p>
+                <p>- catchPhrase: {{user.company.catchPhrase}}</p>
+            </td>
+        </tr>
+    </tbody>
+</table>

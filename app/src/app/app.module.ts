@@ -1,14 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { TextInputComponent } from './text-input/text-input.component';
 import { StructComponent } from './struct/struct.component';
 import { PersonComponent } from './person/person.component';
 import { PersonListComponent } from './person-list/person-list.component';
-// import { ParentComponent } from './parent.component';
-// import { ChildComponent } from './child.component';
+import { ParentComponent } from './parent.component';
+import { ChildComponent } from './child.component';
+import { CardComponent } from './card.component';
+import { LearnPipesComponent } from './learn-pipes/learn-pipes.component';
+import { RoundPipe } from './round.pipe';
+import { ServiceComponent } from './service/service.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +23,18 @@ import { PersonListComponent } from './person-list/person-list.component';
     StructComponent,
     PersonComponent,
     PersonListComponent,
-    // ParentComponent,
-    // ChildComponent
+    ParentComponent,
+    ChildComponent,
+    CardComponent,
+    LearnPipesComponent,
+    RoundPipe,
+    ServiceComponent,
+    WeatherComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

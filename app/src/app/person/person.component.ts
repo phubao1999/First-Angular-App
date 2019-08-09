@@ -17,5 +17,5 @@ export class PersonComponent implements OnInit {
   removeByClick(){
     this.removePerson.emit(this.name);
   }
-  
+ 
 }
