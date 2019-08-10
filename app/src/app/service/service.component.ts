@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './service.component.html',
   styleUrls: ['./service.component.css']
 })
+
 export class ServiceComponent implements OnInit {
   results;
   constructor(private http: HttpClient) { }

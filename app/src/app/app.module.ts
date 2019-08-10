@@ -14,7 +14,7 @@ import { CardComponent } from './card.component';
 import { LearnPipesComponent } from './learn-pipes/learn-pipes.component';
 import { RoundPipe } from './round.pipe';
 import { ServiceComponent } from './service/service.component';
-import { WeatherComponent } from './weather/weather.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { WeatherComponent } from './weather/weather.component';
     LearnPipesComponent,
     RoundPipe,
     ServiceComponent,
-    WeatherComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
