@@ -9,7 +9,8 @@ export class SignInComponent implements OnInit {
   email = '';
   password = '';
   onSubmit(formSignIn){
-    console.log(formSignIn.value)
+    console.log(formSignIn.value);
+    throw new Error ('Form Is in Valid')
   }
   constructor() { }
 
