@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { TextInputComponent } from './text-input/text-input.component';
@@ -10,10 +12,22 @@ import { PersonComponent } from './person/person.component';
 import { PersonListComponent } from './person-list/person-list.component';
 import { ParentComponent } from './parent.component';
 import { ChildComponent } from './child.component';
-import { CardComponent } from './card.component';
 import { LearnPipesComponent } from './learn-pipes/learn-pipes.component';
 import { RoundPipe } from './round.pipe';
 import { ServiceComponent } from './service/service.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { CardsComponent } from './cards/cards.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomePageComponent },
+  { path: 'struct', component: StructComponent },
+  { path: 'service', component: ServiceComponent },
+  { path: 'person-list', component: PersonListComponent },
+  { path: 'pipe', component: LearnPipesComponent },
+  { path: 'cards', component: CardsComponent },
+  { path: '**', component: PageNotFoundComponent },
+];
 
 @NgModule({
   declarations: [
@@ -24,15 +38,19 @@ import { ServiceComponent } from './service/service.component';
     PersonListComponent,
     ParentComponent,
     ChildComponent,
-    CardComponent,
     LearnPipesComponent,
     RoundPipe,
     ServiceComponent,
+    PageNotFoundComponent,
+    HomePageComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes),
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

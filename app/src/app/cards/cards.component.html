@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let contact of contacts">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ contact.name }}</h5>
+                    <p class="card-text">{{ contact.phoneNumber }}</p>
+                    <a routerLink="/cards/{{ contact.id }}" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
