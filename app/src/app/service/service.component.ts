@@ -13,7 +13,7 @@ export class ServiceComponent implements OnInit {
 
   ngOnInit() {
     this.http.get("http://jsonplaceholder.typicode.com/users").subscribe(data => {
-      console.log(data);
+      // console.log(data);
       this.results = data;
     });
   }

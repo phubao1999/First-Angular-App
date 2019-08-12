@@ -14,7 +14,6 @@ import { CardComponent } from './card.component';
 import { LearnPipesComponent } from './learn-pipes/learn-pipes.component';
 import { RoundPipe } from './round.pipe';
 import { ServiceComponent } from './service/service.component';
-import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { SignInComponent } from './sign-in/sign-in.component';
     LearnPipesComponent,
     RoundPipe,
     ServiceComponent,
-    SignInComponent,
   ],
   imports: [
     BrowserModule,
