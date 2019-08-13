@@ -1,1 +1,11 @@
 <h1 class="text-center">Welcome To My Home Page</h1>
+
+<button (click)=getPosts()>Add</button>
+
+<div *ngFor="let post of posts | async">
+    {{post | json}}
+</div>
+
+<button (click)="createPost()">Create New Post</button>
+
+{{newPost | async | json}}

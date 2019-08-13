@@ -12,7 +12,7 @@ export class ServiceComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get("http://jsonplaceholder.typicode.com/users").subscribe(data => {
+    this.http.get('http://jsonplaceholder.typicode.com/users').subscribe(data => {
       // console.log(data);
       this.results = data;
     });

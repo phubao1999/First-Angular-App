@@ -15,21 +15,12 @@
 //     { path: 'service', component: ServiceComponent },
 //     { path: 'person-list', component: PersonListComponent },
 //     { path: 'pipe', component: LearnPipesComponent },
-//     { path: 'cards', component: CardsComponent },
+//     // { path: 'cards', component: CardsComponent },
 //     { path: '**', component: PageNotFoundComponent },
 // ];
 
 // @NgModule({
 //     imports: [RouterModule.forRoot(appRoutes)],
-//     declarations: [
-//         StructComponent,
-//         ServiceComponent,
-//         PersonListComponent,
-//         LearnPipesComponent,
-//         PageNotFoundComponent,
-//         HomePageComponent,
-//         CardsComponent
-//     ],
 //     exports: [RouterModule]
 // })
 

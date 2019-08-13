@@ -1,0 +1,33 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input 
+                required minlength="3" 
+                maxlength="12" 
+                pattern="banana" 
+                ngModel name="firstName"
+                (change)="log(firstName)" 
+                #firstName="ngModel" 
+                type="text" 
+                class="form-control" 
+                id="firstName">
+            <div 
+                class="alert alert-danger" 
+                *ngIf="firstName.touched && !firstName.valid">
+                <div *ngIf="firstName.errors.required">First Name Is Required</div>
+                <div *ngIf="firstName.errors.minlength">First Name Should Be minimum
+                    {{firstName.errors.minlength.requiredLength}} characters.</div>
+                <div *ngIf="firstName.errors.pattern">First Name Doesn't Match The Pattern.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comment">Comment</label>
+            <textarea ngModel name="comment" #commentStatus id="comment" cols="30" rows="10" class="form-control"></textarea>
+            <div class="alert alert-danger" *ngIf="commentStatus.value === 'fuck'">
+                You Do Not Say That Word
+            </div>
+        </div>
+        <div class="btn btn-primary">Submit</div>
+    </form>
+</div>

@@ -18,6 +18,7 @@ import { ServiceComponent } from './service/service.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CardsComponent } from './cards/cards.component';
+import { FormComponent } from './form/form.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'person-list', component: PersonListComponent },
   { path: 'pipe', component: LearnPipesComponent },
   { path: 'cards', component: CardsComponent },
+  { path: 'contact-form', component: FormComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     ServiceComponent,
     PageNotFoundComponent,
     HomePageComponent,
-    CardsComponent
+    CardsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
