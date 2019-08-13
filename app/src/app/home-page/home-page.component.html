@@ -1,4 +1,4 @@
-<h1 class="text-center">Welcome To My Home Page</h1>
+<!-- <h1 class="text-center">Welcome To My Home Page</h1>
 
 <button (click)=getPosts()>Add</button>
 
@@ -8,4 +8,22 @@
 
 <button (click)="createPost()">Create New Post</button>
 
-{{newPost | async | json}}
+{{newPost | async | json}} -->
+<div class="container">
+    <button class="btn btn-primary" (click)="getPhoto()">Get Photo Form Unsplash</button>
+    <div *ngFor="let data of photos; let i = index">
+        <div class="bigOne m-auto">
+            <img class="w-50 element-item" src="{{ data.urls.regular }}" [routerLink]="['/photo', data.id]" />
+            <div>
+                <div>
+                    <a [routerLink]="['/user', data.user.username]">
+                        <img class="" src="{{ data.user.profile_image.small }}">
+                    </a>
+                </div>
+                <div>
+                    <a class="text-dark" [routerLink]="['/user', data.user.username, 'photos']">{{ data.user.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,15 +7,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PersonComponent implements OnInit {
   @Input() name: string;
-  @Input() age: Number;
+  @Input() age: number;
   @Output() removePerson = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {
   }
 
-  removeByClick(){
+  removeByClick() {
     this.removePerson.emit(this.name);
   }
- 
 }
