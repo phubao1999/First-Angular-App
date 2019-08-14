@@ -38,7 +38,6 @@ export class HomePageComponent {
   }
   getPhoto() {
     this.getData().subscribe((data) => {
-      console.log(data);
       this.photos = data;
     });
   }

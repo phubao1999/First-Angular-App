@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AutofocusModule } from 'angular-autofocus-fix';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { TextInputComponent } from './text-input/text-input.component';
@@ -19,6 +21,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomePageComponent } from './home-page/home-page.component';
 import { CardsComponent } from './cards/cards.component';
 import { FormComponent } from './form/form.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
@@ -28,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'pipe', component: LearnPipesComponent },
   { path: 'cards', component: CardsComponent },
   { path: 'contact-form', component: FormComponent },
+  { path: 'todo-list', component: TodoListComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
@@ -46,7 +50,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     HomePageComponent,
     CardsComponent,
-    FormComponent
+    FormComponent,
+    TodoListComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +59,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     CommonModule,
+    AutofocusModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
