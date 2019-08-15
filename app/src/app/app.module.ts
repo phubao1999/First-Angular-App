@@ -22,6 +22,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { CardsComponent } from './cards/cards.component';
 import { FormComponent } from './form/form.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     CardsComponent,
     FormComponent,
     TodoListComponent,
+    TodoItemComponent,
   ],
   imports: [
     BrowserModule,

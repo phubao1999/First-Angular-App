@@ -2,7 +2,7 @@
 
 <button (click)=getPosts()>Add</button>
 
-<div *ngFor="let post of posts | async">
+<div *ngFor="let post of posts | async">lick
     {{post | json}}
 </div>
 
@@ -10,7 +10,6 @@
 
 {{newPost | async | json}} -->
 <div class="container">
-    <button class="btn btn-primary" (click)="getPhoto()">Get Photo Form Unsplash</button>
     <div *ngFor="let data of photos; let i = index">
         <div class="bigOne m-auto">
             <img class="w-50 element-item" src="{{ data.urls.regular }}" [routerLink]="['/photo', data.id]" />

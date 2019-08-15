@@ -55,7 +55,7 @@ export class TodoListComponent implements OnInit {
     ];
   }
   addTodo(): void {   // Fuction That Add New Item
-    if (this.todoTitle.trim().length === 0) {
+    if (this.todoTitle.trim().length === 0) {  // If Length = 0 with mean No create New item
       return;
     }
 
@@ -69,7 +69,7 @@ export class TodoListComponent implements OnInit {
     this.todoTitle = '';
     this.idForTodo++;
   }
-  editTodo(todo: Todo): void {
+  editTodo(todo: Todo): void {   // When Click We Can Change Item
     this.beforeEditCache = todo.title;   // Edit ToDo List, Using Npm Angular-autofocus-fix
     todo.editing = true;
   }
