@@ -11,6 +11,7 @@ export class CardsComponent implements OnInit {
     {id: 2, name: 'ty', phoneNumber: '0456'},
     {id: 3, name: 'chuot', phoneNumber: '0789'},
   ];
+  day: any;
   constructor() { }
 
   ngOnInit() {
